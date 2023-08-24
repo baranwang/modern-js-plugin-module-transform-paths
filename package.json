@@ -17,7 +17,8 @@
     "gen-release-note": "modern gen-release-note",
     "release": "modern release",
     "new": "modern new",
-    "upgrade": "modern upgrade"
+    "upgrade": "modern upgrade",
+    "prepublishOnly": "modern build"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
