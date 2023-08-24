@@ -38,3 +38,5 @@ export default defineConfig({
   }
 }
 ```
+
+运行后还原 tsconfig.json 文件
