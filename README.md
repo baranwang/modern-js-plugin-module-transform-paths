@@ -2,7 +2,7 @@
 
 [中文文档](./README.zh-CN.md)
 
-In its current form, modernjs has difficulty processing code structures like `Promise<import('@common/utils')>`. To address this, we utilize `typescript-transform-paths`.
+Currently, modernjs struggles with processing alias translations in the form of  `Promise<import('@common/utils')>` As a solution, this plugin was created to utilize `typescript-transform-paths` for handling alias.
 
 ## Installation
 

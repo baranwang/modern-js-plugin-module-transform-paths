@@ -1,6 +1,6 @@
 # modern-js-plugin-module-transform-paths
 
-modernjs 在别名转换的时候暂时无法处理类似 `Promise<import('@common/utils')>` 这样形式的代码，因此我们采用了 `typescript-transform-paths` 进行处理。
+modernjs 在别名转换的时候暂时无法处理类似 `Promise<import('@common/utils')>` 这样形式的代码，因此产生了本插件，使用 `typescript-transform-paths` 来处理别名
 
 ## 安装
 
