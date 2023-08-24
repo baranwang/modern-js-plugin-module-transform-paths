@@ -1,11 +1,7 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import {
-  BaseBuildConfig,
-  CliPlugin,
-  ModuleTools,
-} from '@modern-js/module-tools';
+import { BaseBuildConfig, CliPlugin, ModuleTools } from '@modern-js/module-tools';
 
 const TYPESCRIPT_TRANSFORM_PATHS = 'typescript-transform-paths';
 
@@ -26,9 +22,7 @@ export const modulePluginTransformPaths = (): CliPlugin<ModuleTools> => {
       }
       if (
         !tsconfig.compilerOptions?.plugins?.some(
-          (item: any) =>
-            item.transform === TYPESCRIPT_TRANSFORM_PATHS &&
-            item.afterDeclarations,
+          (item: any) => item.transform === TYPESCRIPT_TRANSFORM_PATHS && item.afterDeclarations,
         )
       ) {
         tsconfig.compilerOptions ??= {};
@@ -50,25 +44,16 @@ export const modulePluginTransformPaths = (): CliPlugin<ModuleTools> => {
           /**
            * install ts-patch
            */
-          execSync(
-            `node ${require.resolve('ts-patch/bin/ts-patch.js')} install -s`,
-          );
+          execSync(`node ${require.resolve('ts-patch/bin/ts-patch.js')} install -s`);
 
           /**
            * fake install typescript-transform-paths
            */
           const { nodeModulesDirectory } = api.useAppContext();
-          if (
-            !fs.existsSync(
-              path.resolve(nodeModulesDirectory, TYPESCRIPT_TRANSFORM_PATHS),
-            )
-          ) {
-            fs.symlinkSync(
-              path.dirname(
-                require.resolve(`${TYPESCRIPT_TRANSFORM_PATHS}/package.json`),
-              ),
-              path.resolve(nodeModulesDirectory, TYPESCRIPT_TRANSFORM_PATHS),
-            );
+          const targetPath = path.dirname(require.resolve(`${TYPESCRIPT_TRANSFORM_PATHS}/package.json`));
+          const linkPath = path.resolve(nodeModulesDirectory, TYPESCRIPT_TRANSFORM_PATHS);
+          if (!fs.existsSync(linkPath)) {
+            fs.symlinkSync(targetPath, linkPath);
           }
 
           /**
