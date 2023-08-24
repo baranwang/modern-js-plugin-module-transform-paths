@@ -41,6 +41,7 @@
     "typescript-transform-paths": "^3.4.6"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.26.2",
     "@modern-js-app/eslint-config": "2.31.2",
     "@modern-js/eslint-config": "2.31.2",
     "@modern-js/module-tools": "2.31.2",
