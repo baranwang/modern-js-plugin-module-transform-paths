@@ -1,5 +1,15 @@
 # modern-js-plugin-module-transform-paths
 
+## 0.2.0
+
+### Minor Changes
+
+- b24893d: 运行后还原 tsconfig.json 文件
+
+### Patch Changes
+
+- b24893d: 修复 typescript-transform-paths 依赖不存在的问题
+
 ## 0.1.2
 
 ### Patch Changes
