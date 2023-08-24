@@ -1,5 +1,5 @@
 {
-  "name": "modern-js-plugin-module-transform-paths",
+  "name": "test",
   "version": "0.1.0",
   "types": "./dist/types/index.d.ts",
   "main": "./dist/lib/index.js",
@@ -32,21 +32,21 @@
     "node_modules/",
     "dist/"
   ],
-  "dependencies": {
-    "@swc/helpers": "^0.5.1"
-  },
+  "dependencies": {},
+  "peerDependencies": {},
   "devDependencies": {
-    "@modern-js-app/eslint-config": "2.31.2",
-    "@modern-js/eslint-config": "2.31.2",
     "@modern-js/module-tools": "2.31.2",
+    "@modern-js/eslint-config": "2.31.2",
     "@modern-js/tsconfig": "2.31.2",
-    "@types/node": "~16.11.7",
-    "@types/react": "~18.0.26",
-    "husky": "~8.0.1",
+    "@modern-js-app/eslint-config": "2.31.2",
+    "rimraf": "~3.0.2",
     "lint-staged": "~13.1.0",
     "prettier": "~2.8.1",
-    "rimraf": "~3.0.2",
-    "typescript": "~5.0.4"
+    "husky": "~8.0.1",
+    "typescript": "~5.0.4",
+    "@types/jest": "~29.2.4",
+    "@types/node": "~16.11.7",
+    "@types/react": "~18.0.26"
   },
   "sideEffects": [],
   "publishConfig": {
