@@ -43,3 +43,5 @@ This plugin is built upon [`typescript-transform-paths`](https://www.npmjs.com/p
   },
 }
 ```
+
+After running the build, the tsconfig.json file is restored.
