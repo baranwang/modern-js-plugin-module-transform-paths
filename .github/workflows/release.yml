@@ -12,20 +12,18 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-      - name: Setup Node.js 16
-        uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: pnpm
 
-      - name: Install Dependencies
-        run: pnpm i
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.1.0
+          run_install: true
 
-      - name: Create Release Pull Request
-        uses: changesets/action@v1
+      - uses: changesets/action@v1
         with:
           publish: npm publish
         env:
