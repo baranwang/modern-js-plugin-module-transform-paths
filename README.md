@@ -1,5 +1,9 @@
 # modern-js-plugin-module-transform-paths
 
+[中文文档](./README.zh-CN.md)
+
+In its current form, modernjs has difficulty processing code structures like `Promise<import('@common/utils')>`. To address this, we utilize `typescript-transform-paths`.
+
 ## Installation
 
 ```bash
