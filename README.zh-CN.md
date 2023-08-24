@@ -1,12 +1,12 @@
 # modern-js-plugin-module-transform-paths
 
-## Installation
+## 安装
 
 ```bash
 pnpm add modern-js-plugin-module-transform-paths
 ```
 
-## Configuration
+## 配置
 
 ```ts
 import { moduleTools, defineConfig } from '@modern-js/module-tools';
@@ -21,9 +21,9 @@ export default defineConfig({
 });
 ```
 
-## Description
+## 说明
 
-This plugin is built upon [`typescript-transform-paths`](https://www.npmjs.com/package/typescript-transform-paths). It processes aliases and modifies the project's `tsconfig.json` file to incorporate the `typescript-transform-paths` plugin.
+插件基于 [`typescript-transform-paths`](https://www.npmjs.com/package/typescript-transform-paths) 来处理别名，运行构建会修改项目的 `tsconfig.json` 文件，添加 `typescript-transform-paths` 插件
 
 ```jsonc
 {

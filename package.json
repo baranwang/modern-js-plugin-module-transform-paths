@@ -1,11 +1,10 @@
 {
   "name": "modern-js-plugin-module-transform-paths",
   "version": "0.1.0",
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/lib/index.js",
-  "module": "./dist/es/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
   "scripts": {
-    "prepare": "modern build && husky install",
+    "prepare": "husky install",
     "dev": "modern dev",
     "build": "modern build",
     "build:watch": "modern build -w",
@@ -32,8 +31,14 @@
     "node_modules/",
     "dist/"
   ],
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
   "dependencies": {
-    "@swc/helpers": "^0.5.1"
+    "@swc/helpers": "^0.5.1",
+    "ts-patch": "^3.0.2",
+    "typescript-transform-paths": "^3.4.6"
   },
   "devDependencies": {
     "@modern-js-app/eslint-config": "2.31.2",
