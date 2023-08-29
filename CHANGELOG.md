@@ -1,5 +1,11 @@
 # modern-js-plugin-module-transform-paths
 
+## 0.2.1
+
+### Patch Changes
+
+- 614a30e: 解除依赖版本锁定
+
 ## 0.2.0
 
 ### Minor Changes
