@@ -1,6 +1,6 @@
 {
   "name": "modern-js-plugin-module-transform-paths",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "scripts": {
