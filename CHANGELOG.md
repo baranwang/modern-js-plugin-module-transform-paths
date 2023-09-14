@@ -1,5 +1,11 @@
 # modern-js-plugin-module-transform-paths
 
+## 0.3.0
+
+### Minor Changes
+
+- 34100f1: use fake-install
+
 ## 0.2.1
 
 ### Patch Changes
