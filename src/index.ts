@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
+import { fakeInstall } from 'fake-install';
 import { BaseBuildConfig, CliPlugin, ModuleTools } from '@modern-js/module-tools';
 
 const TYPESCRIPT_TRANSFORM_PATHS = 'typescript-transform-paths';
@@ -50,11 +51,7 @@ export const modulePluginTransformPaths = (): CliPlugin<ModuleTools> => {
            * fake install typescript-transform-paths
            */
           const { nodeModulesDirectory } = api.useAppContext();
-          const targetPath = path.dirname(require.resolve(`${TYPESCRIPT_TRANSFORM_PATHS}/package.json`));
-          const linkPath = path.resolve(nodeModulesDirectory, TYPESCRIPT_TRANSFORM_PATHS);
-          if (!fs.existsSync(linkPath)) {
-            fs.symlinkSync(targetPath, linkPath);
-          }
+          fakeInstall(TYPESCRIPT_TRANSFORM_PATHS, path.resolve(nodeModulesDirectory, '..'));
 
           /**
            * handle tsconfig.json
