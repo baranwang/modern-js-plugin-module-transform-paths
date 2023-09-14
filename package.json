@@ -38,6 +38,7 @@
   ],
   "dependencies": {
     "@swc/helpers": "^0.5.1",
+    "fake-install": "^1.0.0",
     "ts-patch": "^3.0.2",
     "typescript-transform-paths": "^3.4.6"
   },
