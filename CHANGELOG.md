@@ -1,5 +1,12 @@
 # modern-js-plugin-module-transform-paths
 
+## 0.4.0
+
+### Minor Changes
+
+- 0a3d30e: 当程序意外退出时恢复 tsconfig.json 文件
+- 8e3ef92: 更新 modern-js 版本，同步修改 modern-js 废弃的 API
+
 ## 0.3.0
 
 ### Minor Changes
